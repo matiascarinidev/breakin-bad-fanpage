@@ -1,0 +1,24 @@
+.main-section {
+  width: 100%;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: white;
+}
+.main-section article {
+  padding: 1rem;
+}
+.main-section article .flex {
+  display: flex;
+  gap: 1rem;
+}
+.main-section img {
+  width: 30%;
+  object-fit: cover;
+  border-radius: 13px 0 0 13px;
+}
+.main-section iframe {
+  width: 100%;
+  max-width: 70%;
+  border: none;
+  border-radius: 0 13px 13px 0;
+}

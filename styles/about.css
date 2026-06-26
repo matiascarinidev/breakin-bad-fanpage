@@ -1,0 +1,10 @@
+.about-section article ul li p {
+  display: flex;
+}
+.about-section article ul li p strong {
+  width: 25%;
+}
+
+.about-section article ul li p a:hover {
+  color: #da0;
+}

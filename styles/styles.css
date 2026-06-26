@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import "./header.css";
+@import "./main-section.css";
+@import "./about.css";
+@import "./elenco.css";
+@import "./season.css";
+@import "./curiosidades.css";
+@import "./footer.css";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  color: #095;
+}
+body {
+  background: url("../images/background.webp") no-repeat center / cover #0009
+    fixed;
+  background-blend-mode: multiply;
+}
+header {
+  background-color: #111;
+  padding: 1rem 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: #000a 0 10px 10px;
+}
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #000;
+}
+section {
+  padding: 2rem 3rem;
+  margin: 0 auto;
+  max-width: 82%;
+  background-color: #000b;
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+article {
+  border-bottom: #fff5 1px solid;
+  padding: 1rem 0;
+}
+h2 {
+  border-left: #da0 5px solid;
+  color: #da0;
+  padding-left: 1rem;
+  font-size: 1.8rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1.2rem;
+}
+h5 {
+  font-size: 1rem;
+}
+ul {
+  list-style: none;
+}
+img {
+  object-fit: cover;
+}
+a {
+  text-decoration: none;
+}
+p {
+  padding: 0.5rem;
+}
+strong {
+  color: #075;
+}
+.flex {
+  display: flex;
+}
+
+.text-white {
+  color: white;
+}
+.text-green-light {
+  color: #075;
+}
+.text-xs {
+  font-size: 0.8rem;
+}
+.text-sm {
+  font-size: 0.9rem;
+}
+.text.md {
+  font-size: 1.2rem;
+}
+.text-lg {
+  font-size: 1.5rem;
+}
+.text-xl {
+  font-size: 2rem;
+}
+.font-bold {
+  font-weight: bold;
+}
+.font-light {
+  font-weight: 300;
+}
+.link {
+  color: #075;
+}
+a:hover .link,
+.link:hover {
+  font-weight: bold;
+  color: #da0;
+}
+.text {
+  color: white;
+  font-weight: 300;
+}
+.subtitle {
+  border-left: #095 solid 5px;
+  padding-left: 1rem;
+}
+.link-container {
+  text-align: center;
+  margin: 0;
+  padding: 2rem;
+  background-color: #0009;
+  border-radius: 5px;
+}
+.link-container:hover {
+  background: linear-gradient(0deg, #0003, #4441, #0003);
+}
+.link-container:hover a {
+  color: #da0;
+  font-weight: bold;
+}

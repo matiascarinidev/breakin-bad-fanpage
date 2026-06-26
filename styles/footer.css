@@ -1,0 +1,14 @@
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-around;
+}
+.footer-content article {
+  max-width: 50%;
+}
+.footer-content article h3 {
+  font-size: 1rem;
+}
+.footer-content article ul {
+  padding: 0.5rem 0;
+}
