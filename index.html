@@ -409,6 +409,56 @@
                      Jesse se le diera a otro personaje en el final de la primera
                      temporada.
                   </p>
+                </article>
+                <article>
+          <div>
+            <h3>Dejanos alguna curiosidad sobre la serie</h3>
+            <p class="text">
+              ¿Conoces algún dato interesante que no hayamos mencionado?
+              Compartilo con nosotros.
+            </p>
+            <form
+              action="./confirmacion.html"
+              method="GET"
+              class="form-container"
+            >
+              <div class="form-group">
+                <label for="nombre-curiosidad">Nombre</label>
+                <input
+                type="text"
+                id="nombre-curiosidad"
+                name="nombre"
+                placeholder="Tu nombre"
+                required
+                />
+              </div>
+              <div class="form-group">
+                <label for="email-curiosidad">Correo electrónico</label>
+                <input
+                type="email"
+                id="email-curiosidad"
+                name="email"
+                placeholder="tu@email.com"
+                required
+                />
+              </div>
+              <div class="form-group">
+                <label for="curiosidad">Tu curiosidad</label>
+                <textarea
+                  id="curiosidad"
+                  name="mensaje"
+                  rows="4"
+                  placeholder="Escribe tu curiosidad sobre Breaking Bad..."
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="form-submit-btn">
+                Enviar curiosidad
+              </button>
+            </form>
+          </div>
+        </article>
+                <article>
                   <p class="text">
                      Para ver más contenido similar, hace
                      <strong
@@ -448,4 +498,5 @@
          </section>
       </footer>
    </body>
+   <script src="./scripts/curiosidades.js"></script>
 </html>
