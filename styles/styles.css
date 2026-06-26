@@ -5,6 +5,9 @@
 @import "./elenco.css";
 @import "./season.css";
 @import "./curiosidades.css";
+@import "./formulario.css";
+@import "./confirmacion.css";
+@import "./error.css";
 @import "./footer.css";
 * {
   margin: 0;

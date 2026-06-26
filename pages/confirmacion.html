@@ -11,8 +11,8 @@
       name="keywords"
       content="Breaking Bad, Vince Gilligan, Walter White, Jesse Pinkman, Skyler White, Hank Schrader, Marie Schrader, Walter White Jr., Saul Goodman, Gustavo Fring, Mike Ehrmantraut, serie de televisión, drama, crimen, metanfetamina"
     />
-    <link rel="stylesheet" href="./styles/styles.css" />
-    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico" />
     <title>Breaking Bad</title>
   </head>
   <body>
@@ -20,44 +20,31 @@
       <h1>Breaking Bad</h1>
       <nav class="header-nav">
         <ul>
-          <li><a href="#inicio"> Inicio </a></li>
+          <li><a href="../index.html#inicio"> Inicio </a></li>
           <li>
-            <a href="#sobre-la-serie"> Sobre la serie </a>
+            <a href="../index.html#sobre-la-serie"> Sobre la serie </a>
           </li>
           <li>
-            <a href="#elenco"> Elenco </a>
+            <a href="../index.html#elenco"> Elenco </a>
           </li>
           <li>
-            <a href="#temporadas-episodios">Temporadas</a>
+            <a href="../index.html#temporadas-episodios">Temporadas</a>
           </li>
-          <li><a href="#curiosidades">Curiosidades</a></li>
-          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="../index.html#curiosidades">Curiosidades</a></li>
+          <li><a href="../index.html#contacto">Contacto</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <section
-        style="
-          min-height: 60vh;
-          justify-content: center;
-          align-items: center;
-          text-align: center;
-        "
-      >
-        <h2 style="color: #da0; font-size: 2.5rem">¡Mensaje enviado!</h2>
-        <p class="text" style="font-size: 1.5rem; margin: 2rem 0">
-          Gracias
-          <span id="nombreUsuario" style="color: #da0; font-weight: bold"
-            >Walter</span
-          >, su mensaje ha sido recibido.
+      <section class="confirmation-section">
+        <h2 class="confirmation-title">¡Mensaje enviado!</h2>
+        <p class="confirmation-message">
+          Gracias <span id="nombreUsuario">usuario</span>, su mensaje ha sido
+          recibido.
         </p>
-        <p class="text" style="font-size: 1rem">
-          Le responderemos a la brevedad.
-        </p>
-        <div class="link-container" style="margin-top: 2rem">
-          <a href="./index.html" style="color: #095; font-size: 1.2rem"
-            >Volver al inicio</a
-          >
+        <p class="confirmation-text">Le responderemos a la brevedad.</p>
+        <div class="error-link-container">
+          <a href="../index.html">Volver al inicio</a>
         </div>
       </section>
     </main>
