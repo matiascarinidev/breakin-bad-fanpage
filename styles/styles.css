@@ -498,7 +498,11 @@ textarea:focus-visible {
     margin-top: 0.3rem;
   }
 }
-
+@media screen and (min-width: 1024px) {
+  .season-section ul li a .text-container .toggle-btn {
+    display: none !important;
+  }
+}
 /* Desktop pequeño */
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
   section {
