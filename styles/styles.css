@@ -401,7 +401,7 @@ iframe:hover {
     background: #0a7a4a;
     transform: scale(1.05);
     box-shadow: #0a7a4a 0 0 15px;
-    color: white; 
+    color: white;
   }
 
   .curiosidades-section article div ul {
@@ -505,3 +505,4 @@ iframe:hover {
     padding: 0.6rem;
   }
 }
+/* Version: 2.0 - Fuerza actualización */
