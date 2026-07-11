@@ -36,3 +36,9 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(section);
   });
 });
+window.toggleText = function (id, btn) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.classList.toggle("expanded");
+  btn.textContent = el.classList.contains("expanded") ? "Ver menos" : "Ver más";
+};

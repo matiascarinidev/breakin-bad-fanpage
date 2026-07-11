@@ -5,9 +5,21 @@
   gap: 1.5rem;
   max-width: 800px;
   margin: 0 auto;
-  padding: 1rem;
+  border: 1px solid rgba(9, 149, 85, 0.1);
+  border-radius: 12px;
+  padding: 2rem;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.3),
+    rgba(255, 255, 255, 0.02)
+  );
+  transition: all 0.4s ease;
 }
 
+.form-container:focus-within {
+  border-color: rgba(9, 149, 85, 0.3);
+  box-shadow: 0 0 30px rgba(9, 149, 85, 0.05);
+}
 .form-group {
   display: flex;
   flex-direction: column;
@@ -58,10 +70,9 @@
 
 .form-submit-btn:hover {
   background: #0a7a4a;
-  transform: scale(1.05);
-  box-shadow: #0a7a4a 0 0 15px;
+  transform: scale(1.02);
+  box-shadow: 0 0 15px rgba(9, 149, 85, 0.3);
   color: white;
-  /*123523564*/
 }
 
 .form-group:nth-child(1) {
