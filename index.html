@@ -103,7 +103,7 @@
         <h2>Sobre la Serie</h2>
         <article>
           <h3>Sinopsis</h3>
-          <p class="text-md text-white font-light">
+          <p class="text text-md text-white font-light" id="sinopsis">
             Altamente aclamado por la crítica, este drama televisivo escrito y
             producido por Vince Gilligan ('Expediente X') nos muestra la vida de
             Walter White (Bryan Cranston 'Malcolm'), un genio en el campo de la
@@ -341,14 +341,20 @@
               <div class="text-container">
                 <h3>Temporada 1</h3>
                 <h4>7 episodios (2008)</h4>
-                <p class="text">
+                <p class="text" id="desc-t1">
                   Walter White, profesor de química diagnosticado con cáncer
                   terminal, se asocia con su exalumno Jesse Pinkman para cocinar
                   metanfetamina de alta pureza. El negocio incipiente enfrenta a
                   la pareja con distribuidores locales y el narcotraficante Tuco
                   Salamanca.
                 </p>
-                <p class="link">Ver mas detalles</p>
+                <button
+                  class="toggle-btn"
+                  onclick="toggleText('desc-t1', this)"
+                  aria-expanded="false"
+                >
+                  Ver más
+                </button>
               </div>
             </a>
           </li>
@@ -370,14 +376,20 @@
               <div class="text-container">
                 <h3>Temporada 2</h3>
                 <h4>13 episodios (2009)</h4>
-                <p class="text">
+                <p class="text" id="desc-t2">
                   Walter expande su territorio mientras oculta su doble vida a
                   su esposa Skyler, ahora embarazada. La temporada culmina con
                   una colisión aérea sobre Albuquerque causada indirectamente
                   por el deterioro emocional de un controlador aéreo cuyo hijo
                   murió por sobredosis de la metanfetamina de Walter.
                 </p>
-                <p class="link">Ver mas detalles</p>
+                <button
+                  class="toggle-btn"
+                  onclick="toggleText('desc-t1', this)"
+                  aria-expanded="false"
+                >
+                  Ver más
+                </button>
               </div>
             </a>
           </li>
@@ -399,14 +411,20 @@
               <div class="text-container">
                 <h3>Temporada 3</h3>
                 <h4>13 episodios (2010)</h4>
-                <p class="text">
+                <p class="text" id="desc-t3">
                   Walter comienza a trabajar para el capo Gus Fring en un
                   laboratorio subterráneo de lavado de ropa. Cuando Jesse
                   amenaza con demandar a Gus por la muerte de su novia, Walter
                   ordena el asesinato del químico asistente Gale Boetticher para
                   volverse irremplazable.
                 </p>
-                <p class="link">Ver mas detalles</p>
+                <button
+                  class="toggle-btn"
+                  onclick="toggleText('desc-t1', this)"
+                  aria-expanded="false"
+                >
+                  Ver más
+                </button>
               </div>
             </a>
           </li>
@@ -428,13 +446,19 @@
               <div class="text-container">
                 <h3>Temporada 4</h3>
                 <h4>13 episodios (2011)</h4>
-                <p class="text">
+                <p class="text" id="desc-t4">
                   Gus Fring intenta reemplazar a Walter entrenando a Gale, pero
                   Walter sobrevive y manipula a Jesse para que mate a Gale.
                   Walter finalmente asesina a Gus con una bomba colocada en la
                   silla de ruedas de Hector Salamanca.
                 </p>
-                <p class="link">Ver mas detalles</p>
+                <button
+                  class="toggle-btn"
+                  onclick="toggleText('desc-t1', this)"
+                  aria-expanded="false"
+                >
+                  Ver más
+                </button>
               </div>
             </a>
           </li>
@@ -456,7 +480,7 @@
               <div class="text-container">
                 <h3>Temporada 5</h3>
                 <h4>16 episodios divididos en dos partes (2012-2013)</h4>
-                <p class="text">
+                <p class="text" id="desc-t5">
                   Walter se convierte en el único rey de la metanfetamina del
                   suroeste, pero su cuñado Hank Schrader descubre la verdad y lo
                   confronta. Walter ordena el asesinato de testigos, Hank muere
@@ -464,7 +488,13 @@
                   muere en un laboratorio después de rescatar a Jesse y matar a
                   una banda neonazi.
                 </p>
-                <p class="link">Ver mas detalles</p>
+                <button
+                  class="toggle-btn"
+                  onclick="toggleText('desc-t1', this)"
+                  aria-expanded="false"
+                >
+                  Ver más
+                </button>
               </div>
             </a>
           </li>
@@ -477,7 +507,7 @@
         <article>
           <div>
             <h3>¿Sabías que?</h3>
-            <p class="text">
+            <p class="text" id="sabias-que">
               Jesse Pinkman estaba originalmente previsto para ser escrito para
               el noveno episodio. Durante la pausa causada por la huelga de
               escritores, el creador Vince Gilligan, impresionado por la
