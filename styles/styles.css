@@ -91,8 +91,40 @@ section {
   gap: 1rem;
   border-radius: 8px;
   margin-bottom: 1rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+section.visible h2 {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+section.visible article {
+  animation: fadeInUp 0.6s ease 0.1s forwards;
+  opacity: 0;
+}
+
+section.visible ul {
+  animation: fadeInUp 0.6s ease 0.2s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 /* ===== TIPOGRAFÍA ===== */
 h2 {
   border-left: #da0 5px solid;
@@ -205,7 +237,11 @@ a:hover .link,
   border-radius: 5px;
   transition: all 0.3s ease;
 }
-
+.link-container a {
+  color: #095;
+  font-weight: 400;
+  transition: all 0.3s ease;
+}
 .link-container:hover {
   background: linear-gradient(
     0deg,
@@ -216,7 +252,7 @@ a:hover .link,
 }
 
 .link-container:hover a {
-  color: #da0;
+  color: #0a7a4a;
   font-weight: bold;
 }
 
@@ -372,12 +408,70 @@ textarea:focus-visible {
     padding: 0.5rem;
   }
 }
+.text-truncate {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.text-truncate.expanded {
+  -webkit-line-clamp: unset;
+  display: block;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  color: #095;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.85rem;
+  padding: 0.3rem 0;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+.toggle-btn:hover {
+  color: #da0;
+}
+
+.toggle-btn:focus-visible {
+  outline: 2px solid #095;
+  outline-offset: 2px;
+}
 
 /* Tablet */
 @media screen and (min-width: 769px) and (max-width: 1023px) {
   section {
     max-width: 95%;
     padding: 1.5rem;
+  }
+  .season-section ul li a .text-container p.text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .season-section ul li a .text-container p.text.expanded {
+    display: block;
+  }
+
+  .season-section ul li a .text-container .toggle-btn {
+    display: inline-block;
+    margin-top: 0.3rem;
+  }
+  .season-section ul li a .text-container p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .season-section ul li a .text-container p.expanded {
+    display: block;
   }
 
   .elenco-section ul {
@@ -419,6 +513,9 @@ textarea:focus-visible {
   }
   .elenco-main-section .title {
     height: 60vh;
+  }
+  .season-section ul li a .text-container .toggle-btn {
+    display: none;
   }
 }
 

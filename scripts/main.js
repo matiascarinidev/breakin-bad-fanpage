@@ -1,5 +1,5 @@
 (function () {
-  "use strict";
+  ("use strict");
 
   // ===== MENÚ HAMBURGUESA =====
   function initMenu() {
@@ -72,7 +72,7 @@
         });
       },
       {
-        threshold: 0.1,
+        threshold: 0.15,
         rootMargin: "0px 0px -50px 0px",
       }
     );
@@ -174,3 +174,39 @@ window.toggleText = function (id, btn) {
   btn.textContent = isExpanded ? "Ver menos" : "Ver más";
   btn.setAttribute("aria-expanded", isExpanded);
 };
+// ===== TEXT TRUNCATE AUTOMÁTICO =====
+function initTextTruncate() {
+  // Solo en mobile y tablet
+  if (window.innerWidth > 1023) return;
+
+  const paragraphs = document.querySelectorAll(
+    ".season-section ul li a .text-container p.text"
+  );
+
+  paragraphs.forEach(function (p, index) {
+    // Guardar texto original
+    const originalText = p.textContent;
+    p.textContent = originalText;
+    p.classList.add("text-truncate");
+    p.id = "desc-" + index;
+
+    // Crear botón
+    const btn = document.createElement("button");
+    btn.className = "toggle-btn";
+    btn.textContent = "Ver más";
+    btn.setAttribute("onclick", 'toggleText("desc-' + index + '", this)');
+    btn.setAttribute("aria-expanded", "false");
+
+    // Insertar después del párrafo
+    p.parentNode.insertBefore(btn, p.nextSibling);
+  });
+}
+
+// Llamar en DOMContentLoaded
+document.addEventListener("DOMContentLoaded", function () {
+  initMenu();
+  initObserver();
+  initPrefetch();
+  initForm();
+  initTextTruncate(); // Agregar esta línea
+});
