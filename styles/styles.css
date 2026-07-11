@@ -71,6 +71,9 @@ footer {
   margin-top: auto;
   flex-shrink: 0;
 }
+a {
+  text-decoration: none;
+}
 
 /* ===== MENÚ HAMBURGUESA ===== */
 .menu-toggle {
