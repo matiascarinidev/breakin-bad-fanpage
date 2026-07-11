@@ -449,6 +449,11 @@ textarea:focus-visible {
   .season-episodes ul {
     padding: 0.5rem;
   }
+
+  /* Mostrar botón "Ver más" en móvil */
+  .season-section ul li a .text-container .toggle-btn {
+    display: inline-block;
+  }
 }
 
 /* Tablet */
@@ -488,7 +493,7 @@ textarea:focus-visible {
     background-size: cover;
   }
 
-  /* TRUNCAR TEXTOS EN TABLET */
+  /* Truncar textos en tablet y mostrar botón */
   .season-section ul li a .text-container p.text {
     -webkit-line-clamp: 3;
   }
@@ -498,12 +503,15 @@ textarea:focus-visible {
     margin-top: 0.3rem;
   }
 }
+
+/* Desktop (1024px en adelante) - OCULTAR BOTÓN "VER MÁS" */
 @media screen and (min-width: 1024px) {
   .season-section ul li a .text-container .toggle-btn {
     display: none !important;
   }
 }
-/* Desktop pequeño */
+
+/* Desktop pequeño (1024px - 1439px) */
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
   section {
     max-width: 90%;
@@ -512,13 +520,10 @@ textarea:focus-visible {
   .elenco-main-section .title {
     height: 60vh;
   }
-  .season-section ul li a .text-container .toggle-btn {
-    display: none;
-  }
 }
 
-/* Desktop grande */
-@media screen and (min-width: 1440px) {
+/* Desktop grande (1440px - 1919px) */
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
   section {
     max-width: 75%;
     padding: 2.5rem;
@@ -547,13 +552,9 @@ textarea:focus-visible {
   .elenco-main-section .title {
     height: 65vh;
   }
-
-  .season-section ul li a .text-container .toggle-btn {
-    display: none;
-  }
 }
 
-/* 2K+ */
+/* 2K+ (1920px y superiores) */
 @media screen and (min-width: 1920px) {
   section {
     max-width: 65%;
@@ -574,9 +575,5 @@ textarea:focus-visible {
 
   .elenco-main-section .title {
     height: 70vh;
-  }
-
-  .season-section ul li a .text-container .toggle-btn {
-    display: none;
   }
 }
