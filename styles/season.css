@@ -10,7 +10,7 @@
   color: #ffffff;
 }
 
-.season-section ul li a {
+.season-section ul li {
   background: linear-gradient(0deg, #0001, #fff1, #2229);
   border-radius: 15px;
   padding: 1.5rem;
@@ -21,7 +21,7 @@
   box-shadow: #000a 0 5px 5px;
 }
 
-.season-section ul li a iframe {
+.season-section ul li iframe {
   border-radius: 10px;
   width: 100%;
   border: none;
