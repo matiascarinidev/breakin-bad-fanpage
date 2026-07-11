@@ -374,11 +374,11 @@ textarea:focus-visible {
     max-width: 60px;
   }
 
-  .season-section ul li a {
+  .season-section ul li {
     grid-template-columns: 1fr;
   }
 
-  .season-section ul li a iframe {
+  .season-section ul li iframe {
     height: 180px;
   }
 
@@ -467,7 +467,7 @@ textarea:focus-visible {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .season-section ul li a {
+  .season-section ul li {
     grid-template-columns: 30% 1fr;
   }
 
@@ -533,11 +533,11 @@ textarea:focus-visible {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .season-section ul li a {
+  .season-section ul li {
     grid-template-columns: 20% 1fr;
   }
 
-  .season-section ul li a iframe {
+  .season-section ul li iframe {
     height: 220px;
   }
 
