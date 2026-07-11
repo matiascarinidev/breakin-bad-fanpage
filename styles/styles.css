@@ -125,6 +125,7 @@ section.visible ul {
     transform: translateY(0);
   }
 }
+
 /* ===== TIPOGRAFÍA ===== */
 h2 {
   border-left: #da0 5px solid;
@@ -229,6 +230,7 @@ a:hover .link,
   padding-left: 1rem;
 }
 
+/* ===== LINK CONTAINER (Botón "Ver elenco completo") ===== */
 .link-container {
   text-align: center;
   margin: 0;
@@ -237,11 +239,13 @@ a:hover .link,
   border-radius: 5px;
   transition: all 0.3s ease;
 }
+
 .link-container a {
   color: #095;
   font-weight: 400;
   transition: all 0.3s ease;
 }
+
 .link-container:hover {
   background: linear-gradient(
     0deg,
@@ -252,7 +256,7 @@ a:hover .link,
 }
 
 .link-container:hover a {
-  color: #0a7a4a;
+  color: #da0;
   font-weight: bold;
 }
 
@@ -285,6 +289,44 @@ a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
+  outline: 2px solid #095;
+  outline-offset: 2px;
+}
+
+/* ============================================================ */
+/* ===== TEXT TRUNCATE CON "VER MÁS" ===== */
+/* ============================================================ */
+
+.text-truncate {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.text-truncate.expanded {
+  -webkit-line-clamp: unset;
+  display: block;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  color: #095;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.85rem;
+  padding: 0.3rem 0;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+.toggle-btn:hover {
+  color: #da0;
+}
+
+.toggle-btn:focus-visible {
   outline: 2px solid #095;
   outline-offset: 2px;
 }
@@ -408,70 +450,12 @@ textarea:focus-visible {
     padding: 0.5rem;
   }
 }
-.text-truncate {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-
-.text-truncate.expanded {
-  -webkit-line-clamp: unset;
-  display: block;
-}
-
-.toggle-btn {
-  background: none;
-  border: none;
-  color: #095;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 0.85rem;
-  padding: 0.3rem 0;
-  transition: color 0.3s ease;
-  display: inline-block;
-}
-
-.toggle-btn:hover {
-  color: #da0;
-}
-
-.toggle-btn:focus-visible {
-  outline: 2px solid #095;
-  outline-offset: 2px;
-}
 
 /* Tablet */
 @media screen and (min-width: 769px) and (max-width: 1023px) {
   section {
     max-width: 95%;
     padding: 1.5rem;
-  }
-  .season-section ul li a .text-container p.text {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    transition: all 0.3s ease;
-  }
-
-  .season-section ul li a .text-container p.text.expanded {
-    display: block;
-  }
-
-  .season-section ul li a .text-container .toggle-btn {
-    display: inline-block;
-    margin-top: 0.3rem;
-  }
-  .season-section ul li a .text-container p {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    transition: all 0.3s ease;
-  }
-
-  .season-section ul li a .text-container p.expanded {
-    display: block;
   }
 
   .elenco-section ul {
@@ -503,9 +487,19 @@ textarea:focus-visible {
     height: 50vh;
     background-size: cover;
   }
+
+  /* TRUNCAR TEXTOS EN TABLET */
+  .season-section ul li a .text-container p.text {
+    -webkit-line-clamp: 3;
+  }
+
+  .season-section ul li a .text-container .toggle-btn {
+    display: inline-block;
+    margin-top: 0.3rem;
+  }
 }
 
-/* Desktop grande */
+/* Desktop pequeño */
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
   section {
     max-width: 90%;
@@ -519,6 +513,7 @@ textarea:focus-visible {
   }
 }
 
+/* Desktop grande */
 @media screen and (min-width: 1440px) {
   section {
     max-width: 75%;
@@ -548,6 +543,10 @@ textarea:focus-visible {
   .elenco-main-section .title {
     height: 65vh;
   }
+
+  .season-section ul li a .text-container .toggle-btn {
+    display: none;
+  }
 }
 
 /* 2K+ */
@@ -571,5 +570,9 @@ textarea:focus-visible {
 
   .elenco-main-section .title {
     height: 70vh;
+  }
+
+  .season-section ul li a .text-container .toggle-btn {
+    display: none;
   }
 }
