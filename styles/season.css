@@ -2,66 +2,91 @@
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   gap: 1rem;
 }
+
 .season-section p {
   text-align: center;
+  color: #ffffff;
 }
+
 .season-section ul li a {
   background: linear-gradient(0deg, #0001, #fff1, #2229);
   border-radius: 15px;
   padding: 1.5rem;
   display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: 25% 1fr 1fr;
+  grid-template-columns: 25% 1fr;
   gap: 0.5rem;
   align-items: center;
   box-shadow: #000a 0 5px 5px;
 }
+
 .season-section ul li a iframe {
   border-radius: 10px;
   width: 100%;
   border: none;
 }
+
 .season-section ul li a .text-container {
-  grid-column: 2 / 4;
   padding: 0.5rem;
 }
-.season-section ul li a .text-container h3,
-.season-section ul li a .text-container h4 {
+
+.season-section ul li a .text-container h3 {
+  color: #ffffff;
   padding: 0 1rem;
 }
+
 .season-section ul li a .text-container h4 {
   color: #075;
+  padding: 0 1rem;
 }
+
 .season-section ul li a .text-container p {
   padding: 1rem;
   text-align: left;
+  color: #ffffff;
 }
+
 .season-main-section article {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
   align-items: center;
 }
+
 .season-main-section iframe {
   grid-column: 1/2;
   border: none;
 }
+
 .season-main-section div {
   display: flex;
   flex-direction: column;
   grid-column: 1/2;
   gap: 0.5rem;
 }
+
+.season-main-section div h2 {
+  color: #da0;
+}
+
+.season-main-section div h3 {
+  color: #ffffff;
+}
+
+.season-main-section div p {
+  color: #ffffff;
+}
+
 .season-episodes ul {
   padding: 2rem;
 }
+
 .season-episodes ul li p {
   color: white;
   font-weight: 300;
 }
+
 .season-episodes ul li h3 {
   font-size: 1.2rem;
   color: #075;
@@ -72,9 +97,11 @@
   .season-main-section article {
     grid-template-columns: repeat(3, 1fr);
   }
+
   .season-main-section iframe {
     grid-column: 1/2;
   }
+
   .season-main-section div {
     grid-column: 2/4;
   }
@@ -84,10 +111,12 @@
   .season-section ul li a {
     grid-template-columns: 30% 1fr;
   }
+
   .season-section ul li a iframe {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
   }
+
   .season-section ul li a .text-container {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
@@ -98,9 +127,11 @@
   .season-section ul li a {
     grid-template-columns: 1fr;
   }
+
   .season-section ul li a iframe {
     height: 180px;
   }
+
   .season-section ul li a .text-container {
     grid-column: 1 / 2;
   }

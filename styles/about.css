@@ -1,8 +1,10 @@
 .about-section article ul li p {
   display: flex;
 }
+
 .about-section article ul li p strong {
   width: 25%;
+  color: #ffffff;
 }
 
 .about-section article ul li p a:hover {

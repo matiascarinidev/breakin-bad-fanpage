@@ -4,15 +4,35 @@
   border-radius: 15px;
   box-shadow: #000a 0 5px 5px;
 }
+
 .curiosidades-section article div h3 {
   padding-left: 1rem;
   border-left: 5px solid #095;
+  color: #ffffff;
 }
+
+.curiosidades-section article div p {
+  color: #ffffff;
+}
+
 .curiosidades-section article div ul {
   display: flex;
   padding: 2rem;
   gap: 2rem;
 }
+
 .curiosidades-section article div ul li {
   gap: 1rem;
+}
+
+.curiosidades-section article div ul li p {
+  color: #ffffff;
+}
+
+.curiosidades-section article div ul li p strong {
+  color: #075;
+}
+
+.curiosidades-section article div ul li p .text {
+  color: #ffffff;
 }
