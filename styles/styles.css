@@ -1,18 +1,6 @@
 /* ===== FONTS ===== */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
 
-/* ===== COMPONENTES ===== */
-@import "./header.css";
-@import "./main-section.css";
-@import "./about.css";
-@import "./elenco.css";
-@import "./season.css";
-@import "./curiosidades.css";
-@import "./formulario.css";
-@import "./confirmacion.css";
-@import "./error.css";
-@import "./footer.css";
-
 /* ===== RESET & BASE ===== */
 * {
   margin: 0;
@@ -32,17 +20,16 @@ body {
 }
 
 body {
-  background: #000;
   background-image: url("https://breakin-bad-fanpage.vercel.app/images/background.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  background-blend-mode: multiply;
+  background-blend-mode: overlay;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  color: #095;
+  color: #ffffff;
 }
 
 /* ===== LAYOUT ===== */
@@ -160,7 +147,7 @@ section {
   padding: 2rem 3rem;
   margin: 0 auto;
   max-width: 82%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(5px);
   display: flex;
   flex-direction: column;
@@ -179,12 +166,15 @@ h2 {
 
 h3 {
   font-size: 1.5rem;
+  color: #ffffff;
 }
 h4 {
   font-size: 1.2rem;
+  color: #ffffff;
 }
 h5 {
   font-size: 1rem;
+  color: #ffffff;
 }
 
 /* ===== ELEMENTOS COMUNES ===== */
@@ -214,6 +204,7 @@ a {
 
 p {
   padding: 0.5rem;
+  color: #ffffff;
 }
 
 strong {
@@ -431,6 +422,7 @@ textarea:focus-visible {
 
 .footer-content article h3 {
   font-size: 1rem;
+  color: #ffffff;
 }
 
 .footer-content article ul {
@@ -469,6 +461,7 @@ textarea:focus-visible {
 }
 .about-section article ul li p strong {
   width: 25%;
+  color: #ffffff;
 }
 .about-section article ul li p a:hover {
   color: #da0;
@@ -514,6 +507,7 @@ textarea:focus-visible {
 .elenco-section ul li h3 {
   font-size: 1rem;
   padding: 0 0.5rem;
+  color: #ffffff;
 }
 .elenco-section ul li h4 {
   font-size: 0.9rem;
@@ -541,17 +535,36 @@ textarea:focus-visible {
   padding: 2rem 1rem;
   gap: 0.5rem;
 }
+.elenco-main-section .title h2 {
+  color: #da0;
+}
+.elenco-main-section .title h3 {
+  color: #ffffff;
+}
 
 .elenco-main-section article {
   border-radius: 10px;
   padding: 2rem 3rem;
   background: linear-gradient(#000, #fff1);
 }
+.elenco-main-section article h3 {
+  color: #ffffff;
+}
 .elenco-main-section article h4 {
+  color: #ffffff;
   padding-top: 0.5rem;
 }
 .elenco-main-section article ul {
   padding: 1rem 0;
+}
+.elenco-main-section article ul li p {
+  color: #ffffff;
+}
+.elenco-main-section article ul li p span {
+  color: #ffffff;
+}
+.elenco-main-section article ul li p .text {
+  color: #ffffff;
 }
 
 /* ===== SEASON ===== */
@@ -563,6 +576,7 @@ textarea:focus-visible {
 }
 .season-section p {
   text-align: center;
+  color: #ffffff;
 }
 .season-section ul li a {
   background: linear-gradient(0deg, #0001, #fff1, #2229);
@@ -582,16 +596,18 @@ textarea:focus-visible {
 .season-section ul li a .text-container {
   padding: 0.5rem;
 }
-.season-section ul li a .text-container h3,
-.season-section ul li a .text-container h4 {
+.season-section ul li a .text-container h3 {
+  color: #ffffff;
   padding: 0 1rem;
 }
 .season-section ul li a .text-container h4 {
   color: #075;
+  padding: 0 1rem;
 }
 .season-section ul li a .text-container p {
   padding: 1rem;
   text-align: left;
+  color: #ffffff;
 }
 .season-main-section article {
   display: grid;
@@ -608,6 +624,15 @@ textarea:focus-visible {
   flex-direction: column;
   grid-column: 1/2;
   gap: 0.5rem;
+}
+.season-main-section div h2 {
+  color: #da0;
+}
+.season-main-section div h3 {
+  color: #ffffff;
+}
+.season-main-section div p {
+  color: #ffffff;
 }
 .season-episodes ul {
   padding: 2rem;
@@ -631,6 +656,10 @@ textarea:focus-visible {
 .curiosidades-section article div h3 {
   padding-left: 1rem;
   border-left: 5px solid #095;
+  color: #ffffff;
+}
+.curiosidades-section article div p {
+  color: #ffffff;
 }
 .curiosidades-section article div ul {
   display: flex;
@@ -639,6 +668,15 @@ textarea:focus-visible {
 }
 .curiosidades-section article div ul li {
   gap: 1rem;
+}
+.curiosidades-section article div ul li p {
+  color: #ffffff;
+}
+.curiosidades-section article div ul li p strong {
+  color: #075;
+}
+.curiosidades-section article div ul li p .text {
+  color: #ffffff;
 }
 
 /* ===== FORMULARIO ===== */
