@@ -103,7 +103,11 @@
         <h2>Sobre la Serie</h2>
         <article>
           <h3>Sinopsis</h3>
-          <p class="text text-md text-white font-light" id="sinopsis">
+          <!-- AGREGADA CLASE text-truncate Y ID -->
+          <p
+            class="text text-md text-white font-light text-truncate"
+            id="sinopsis"
+          >
             Altamente aclamado por la crítica, este drama televisivo escrito y
             producido por Vince Gilligan ('Expediente X') nos muestra la vida de
             Walter White (Bryan Cranston 'Malcolm'), un genio en el campo de la
@@ -124,6 +128,14 @@
             la traducción más acertada del título original de la serie es:
             "Portandose mal".
           </p>
+          <!-- AGREGADO BOTÓN "VER MÁS" PARA LA SINOPSIS -->
+          <button
+            class="toggle-btn"
+            onclick="toggleText('sinopsis', this)"
+            aria-expanded="false"
+          >
+            Ver más
+          </button>
         </article>
         <article>
           <ul>
@@ -385,7 +397,7 @@
                 </p>
                 <button
                   class="toggle-btn"
-                  onclick="toggleText('desc-t1', this)"
+                  onclick="toggleText('desc-t2', this)"
                   aria-expanded="false"
                 >
                   Ver más
@@ -420,7 +432,7 @@
                 </p>
                 <button
                   class="toggle-btn"
-                  onclick="toggleText('desc-t1', this)"
+                  onclick="toggleText('desc-t3', this)"
                   aria-expanded="false"
                 >
                   Ver más
@@ -454,7 +466,7 @@
                 </p>
                 <button
                   class="toggle-btn"
-                  onclick="toggleText('desc-t1', this)"
+                  onclick="toggleText('desc-t4', this)"
                   aria-expanded="false"
                 >
                   Ver más
@@ -490,7 +502,7 @@
                 </p>
                 <button
                   class="toggle-btn"
-                  onclick="toggleText('desc-t1', this)"
+                  onclick="toggleText('desc-t5', this)"
                   aria-expanded="false"
                 >
                   Ver más
@@ -516,6 +528,13 @@
               que el destino de Jesse se le diera a otro personaje en el final
               de la primera temporada.
             </p>
+            <button
+              class="toggle-btn"
+              onclick="toggleText('sabias-que', this)"
+              aria-expanded="false"
+            >
+              Ver más
+            </button>
           </div>
         </article>
         <article>
