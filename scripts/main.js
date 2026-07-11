@@ -1,36 +1,176 @@
-const formulario = document.querySelector(".form-container");
+(function () {
+  "use strict";
 
-if (formulario) {
-  formulario.addEventListener("submit", function (event) {
-    const nombre = document.getElementById("nombre-curiosidad");
-    const email = document.getElementById("email-curiosidad");
-    const mensaje = document.getElementById("curiosidad");
+  // ===== MENÚ HAMBURGUESA =====
+  function initMenu() {
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("nav-menu");
 
-    let hasError = false;
+    if (!toggle || !menu) return;
 
-    if (!nombre.value.trim()) {
-      nombre.classList.add("error");
-      hasError = true;
-    }
+    toggle.addEventListener("click", function (e) {
+      e.stopPropagation();
+      this.classList.toggle("active");
+      menu.classList.toggle("active");
+      const expanded = menu.classList.contains("active");
+      this.setAttribute("aria-expanded", expanded);
+    });
 
-    if (!email.value.trim()) {
-      email.classList.add("error");
-      hasError = true;
-    }
+    menu.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        toggle.classList.remove("active");
+        menu.classList.remove("active");
+        toggle.setAttribute("aria-expanded", "false");
+      });
+    });
 
-    if (!mensaje.value.trim()) {
-      mensaje.classList.add("error");
-      hasError = true;
-    }
+    document.addEventListener("click", function (e) {
+      if (!menu.contains(e.target) && !toggle.contains(e.target)) {
+        menu.classList.remove("active");
+        toggle.classList.remove("active");
+        toggle.setAttribute("aria-expanded", "false");
+      }
+    });
 
-    if (hasError) {
-      event.preventDefault();
-      alert("Todos los campos son obligatorios.");
-    } else {
-      // Feedback visual de envío
-      const btn = formulario.querySelector(".form-submit-btn");
-      btn.classList.add("loading");
-      btn.disabled = true;
-    }
+    let lastScrollTop = 0;
+    window.addEventListener(
+      "scroll",
+      function () {
+        const scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+        if (Math.abs(scrollTop - lastScrollTop) > 50) {
+          menu.classList.remove("active");
+          toggle.classList.remove("active");
+          toggle.setAttribute("aria-expanded", "false");
+        }
+        lastScrollTop = scrollTop;
+      },
+      { passive: true }
+    );
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && menu.classList.contains("active")) {
+        menu.classList.remove("active");
+        toggle.classList.remove("active");
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.focus();
+      }
+    });
+  }
+
+  // ===== OBSERVER DE SECCIONES =====
+  function initObserver() {
+    const sections = document.querySelectorAll("section");
+    if (!sections.length) return;
+
+    const observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      }
+    );
+
+    sections.forEach(function (section) {
+      observer.observe(section);
+    });
+  }
+
+  // ===== PREFETCH =====
+  function initPrefetch() {
+    document
+      .querySelectorAll('a[href^="/pages/"], a[href$=".html"]')
+      .forEach(function (link) {
+        link.addEventListener("mouseenter", function () {
+          const href = this.getAttribute("href");
+          if (href && !href.startsWith("http")) {
+            const prefetchLink = document.createElement("link");
+            prefetchLink.rel = "prefetch";
+            prefetchLink.href = href;
+            document.head.appendChild(prefetchLink);
+          }
+        });
+      });
+  }
+
+  // ===== VALIDACIÓN FORMULARIO =====
+  function initForm() {
+    const form = document.querySelector(".form-container");
+    if (!form) return;
+
+    const inputs = form.querySelectorAll("input, textarea");
+
+    inputs.forEach(function (input) {
+      input.addEventListener("blur", function () {
+        if (this.hasAttribute("required") && !this.value.trim()) {
+          this.classList.add("error");
+        } else {
+          this.classList.remove("error");
+        }
+      });
+
+      input.addEventListener("input", function () {
+        if (this.classList.contains("error") && this.value.trim()) {
+          this.classList.remove("error");
+        }
+      });
+    });
+
+    form.addEventListener("submit", function (event) {
+      const nombre = document.getElementById("nombre-curiosidad");
+      const email = document.getElementById("email-curiosidad");
+      const mensaje = document.getElementById("curiosidad");
+
+      let hasError = false;
+
+      if (!nombre || !nombre.value.trim()) {
+        if (nombre) nombre.classList.add("error");
+        hasError = true;
+      }
+
+      if (!email || !email.value.trim()) {
+        if (email) email.classList.add("error");
+        hasError = true;
+      }
+
+      if (!mensaje || !mensaje.value.trim()) {
+        if (mensaje) mensaje.classList.add("error");
+        hasError = true;
+      }
+
+      if (hasError) {
+        event.preventDefault();
+        alert("Todos los campos son obligatorios.");
+      } else {
+        const btn = form.querySelector(".form-submit-btn");
+        if (btn) {
+          btn.classList.add("loading");
+          btn.disabled = true;
+        }
+      }
+    });
+  }
+
+  // ===== INICIALIZACIÓN =====
+  document.addEventListener("DOMContentLoaded", function () {
+    initMenu();
+    initObserver();
+    initPrefetch();
+    initForm();
   });
-}
+})();
+
+// ===== FUNCIÓN GLOBAL =====
+window.toggleText = function (id, btn) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const isExpanded = el.classList.toggle("expanded");
+  btn.textContent = isExpanded ? "Ver menos" : "Ver más";
+  btn.setAttribute("aria-expanded", isExpanded);
+};

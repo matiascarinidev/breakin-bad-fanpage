@@ -1,5 +1,8 @@
 .confirmation-section {
   min-height: 60vh;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;

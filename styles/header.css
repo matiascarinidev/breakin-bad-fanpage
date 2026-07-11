@@ -94,7 +94,7 @@
   }
 
   .header-nav ul {
-    display: none !important;
+    display: none;
     flex-direction: column;
     width: 100%;
     background: rgba(17, 17, 17, 0.98);
@@ -108,7 +108,7 @@
   }
 
   .header-nav ul.active {
-    display: flex !important;
+    display: flex;
   }
 
   .header-nav ul li a {

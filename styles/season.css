@@ -41,7 +41,7 @@
 }
 .season-main-section article {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 2rem;
   align-items: center;
 }
@@ -52,7 +52,7 @@
 .season-main-section div {
   display: flex;
   flex-direction: column;
-  grid-column: 2/4;
+  grid-column: 1/2;
   gap: 0.5rem;
 }
 .season-episodes ul {
@@ -65,4 +65,43 @@
 .season-episodes ul li h3 {
   font-size: 1.2rem;
   color: #075;
+}
+
+/* ===== MEDIA QUERIES SEASON ===== */
+@media screen and (min-width: 768px) {
+  .season-main-section article {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .season-main-section iframe {
+    grid-column: 1/2;
+  }
+  .season-main-section div {
+    grid-column: 2/4;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+  .season-section ul li a {
+    grid-template-columns: 30% 1fr;
+  }
+  .season-section ul li a iframe {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  .season-section ul li a .text-container {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .season-section ul li a {
+    grid-template-columns: 1fr;
+  }
+  .season-section ul li a iframe {
+    height: 180px;
+  }
+  .season-section ul li a .text-container {
+    grid-column: 1 / 2;
+  }
 }

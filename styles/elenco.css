@@ -1,80 +1,59 @@
-.elenco-section ul {
-  padding: 2rem;
-  display: grid;
-  grid-template-rows: repeat(auto-fit, minmax(150px, auto));
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-.elenco-section ul li {
-  background: linear-gradient(0deg, #0001, #fff1, #2229);
-  padding: 1rem;
-  border-radius: 10px;
-  display: grid;
-  grid-template-rows: auto auto;
-  grid-template-columns: 30% 1fr 1fr;
-  gap: 0.5rem;
-  align-items: center;
-  box-shadow: #000a 0 5px 5px;
-}
-.elenco-section ul li .img-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  border-radius: 15px;
-}
-.elenco-section ul li .text-container {
-  padding: 0.5rem;
-  grid-row: 1 / 3;
-  grid-column: 2 / 4;
-}
-.elenco-section ul li .img-container {
-  height: 100%;
-  width: 100%;
-  max-width: 150px;
-  grid-column: 1 / 2;
-  grid-row: 1/3;
-}
-.elenco-section ul li h3 {
-  font-size: 1rem;
-  padding: 0 0.5rem;
-}
-.elenco-section ul li h4 {
-  font-size: 0.9rem;
-  color: #075;
-  padding: 0 0.5rem;
-}
-.elenco-section ul li p {
-  grid-row: 2 / 3;
-  grid-column: 2/4;
-  font-size: 0.9rem;
-  color: white;
-}
-
-.elenco-main-section .title {
-  width: 100%;
-  height: 70vh;
-  background: linear-gradient(0deg, #000 20%, #0000),
-    url("../images/poster.jpg") no-repeat;
-  background-position: 50% 15%;
-  background-size: 100%;
+.error-section {
+  min-height: 60vh;
+  flex: 1;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
   flex-direction: column;
-  padding: 2rem 1rem;
-  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.elenco-main-section article {
-  border-radius: 10px;
-  padding: 2rem 3rem;
-  background: linear-gradient(#000, #fff1);
+.error-title {
+  color: #da0;
+  font-size: 5rem;
 }
-.elenco-main-section article h4 {
-  padding-top: 0.5rem;
+
+.error-subtitle {
+  color: white;
+  font-size: 2rem;
 }
-.elenco-main-section article ul {
-  padding: 1rem 0;
+
+.error-text {
+  color: white;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 1rem auto;
+}
+
+.error-link-container {
+  margin-top: 2rem;
+}
+
+.error-link {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  color: #095;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid #095;
+}
+
+.error-link:hover {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(68, 68, 68, 0.1));
+  color: #da0;
+  font-weight: bold;
+  border-color: #da0;
+  transform: scale(1.02);
+}
+
+.error-link:active {
+  transform: scale(0.98);
+}
+
+.error-link:focus-visible {
+  outline: 3px solid #da0;
+  outline-offset: 2px;
 }
