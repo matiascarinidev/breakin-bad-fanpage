@@ -6,7 +6,6 @@
 }
 
 .season-section p {
-  text-align: center;
   color: #ffffff;
 }
 
@@ -27,22 +26,15 @@
   border: none;
 }
 
-.season-section ul li  .text-container {
-  padding: 0.5rem;
-}
-
 .season-section ul li .text-container h3 {
   color: #ffffff;
-  padding: 0 1rem;
 }
 
 .season-section ul li .text-container h4 {
   color: #075;
-  padding: 0 1rem;
 }
 
 .season-section ul li .text-container p {
-  padding: 1rem;
   text-align: left;
   color: #ffffff;
 }
@@ -108,8 +100,9 @@
 }
 
 @media screen and (min-width: 769px) and (max-width: 1023px) {
-  .season-section ul li  {
+  .season-section ul li {
     grid-template-columns: 30% 1fr;
+    padding: 1rem;
   }
 
   .season-section ul li iframe {
@@ -118,14 +111,15 @@
   }
 
   .season-section ul li .text-container {
-    grid-column: 2 / 3;
+    grid-column: 3 / 3;
     grid-row: 1 / 2;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .season-section ul li a {
+  .season-section ul li {
     grid-template-columns: 1fr;
+    padding: 0.5rem;
   }
 
   .season-section ul li iframe {

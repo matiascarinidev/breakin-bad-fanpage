@@ -178,9 +178,15 @@ strong {
 
 /* ===== UTILIDADES ===== */
 .flex {
+  border: 2px solid red;
   display: flex;
 }
-
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.justify-beetween {
+  justify-content: space-between;
+}
 .text-white {
   color: white;
 }
