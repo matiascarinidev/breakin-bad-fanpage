@@ -1,5 +1,15 @@
 /* ===== FONTS ===== */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+@import "./about.css";
+@import "./confirmacion.css";
+@import "./curiosidades.css";
+@import "./elenco.css";
+@import "./error.css";
+@import "./footer.css";
+@import "./formulario.css";
+@import "./header.css";
+@import "./main-section.css";
+@import "./season.css";
 
 /* ===== RESET & BASE ===== */
 * {
@@ -60,41 +70,6 @@ footer {
   background: #000;
   margin-top: auto;
   flex-shrink: 0;
-}
-
-/* ===== HEADER NAV ===== */
-.header-nav ul {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.header-nav ul li a {
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-  transition: color 0.3s ease;
-  position: relative;
-}
-
-.header-nav ul li a:hover {
-  color: #095;
-}
-
-.header-nav ul li a[aria-current="page"] {
-  color: #095;
-}
-
-.header-nav ul li a[aria-current="page"]::after {
-  content: "";
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: #095;
 }
 
 /* ===== MENÚ HAMBURGUESA ===== */
