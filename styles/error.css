@@ -21,26 +21,20 @@
   max-width: 600px;
   margin: 1rem auto;
 }
-
-.error-link-container {
-  margin-top: 2rem;
-  padding: 2rem;
+.error-link {
+  display: inline-block;
+  padding: 1rem 2rem;
   background-color: #0009;
   border-radius: 5px;
-  text-align: center;
-}
-
-.error-link-container:hover {
-  background: linear-gradient(0deg, #0003, #4441, #0003);
-}
-
-.error-link-container a {
   color: #095;
   font-size: 1.2rem;
   text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: 2rem;
 }
-
-.error-link-container:hover a {
-  color: #da0;
+.error-link:hover {
+  background: linear-gradient(0deg, #0003, #4441, #0003);
+  color: #0a7a4a;
   font-weight: bold;
 }
+

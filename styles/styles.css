@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-@import "./header.css";
-@import "./main-section.css";
-@import "./about.css";
-@import "./elenco.css";
-@import "./season.css";
-@import "./curiosidades.css";
-@import "./formulario.css";
-@import "./confirmacion.css";
-@import "./error.css";
-@import "./footer.css";
+@import "https://breakin-bad-fanpage.vercel.app//header.css";
+@import "https://breakin-bad-fanpage.vercel.app//main-section.css";
+@import "https://breakin-bad-fanpage.vercel.app//about.css";
+@import "https://breakin-bad-fanpage.vercel.app//elenco.css";
+@import "https://breakin-bad-fanpage.vercel.app//season.css";
+@import "https://breakin-bad-fanpage.vercel.app//curiosidades.css";
+@import "https://breakin-bad-fanpage.vercel.app//formulario.css";
+@import "https://breakin-bad-fanpage.vercel.app//confirmacion.css";
+@import "https://breakin-bad-fanpage.vercel.app//error.css";
+@import "https://breakin-bad-fanpage.vercel.app//footer.css";
 * {
   margin: 0;
   padding: 0;
@@ -22,7 +22,7 @@ body {
   margin: 0;
 }
 body {
-  background: url("../images/background.webp") no-repeat center / cover #0009
+  background: url("https://breakin-bad-fanpage.vercel.app//images/background.webp") no-repeat center / cover #0009
     fixed;
   background-blend-mode: multiply;
   display: flex;
@@ -59,6 +59,40 @@ section {
   flex-direction: column;
   gap: 1rem;
   animation: fadeIn 0.6s ease-out;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Los elementos dentro de section también pueden tener delay */
+section.visible h2 {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+section.visible article {
+  animation: fadeInUp 0.6s ease 0.1s forwards;
+  opacity: 0;
+}
+
+section.visible ul {
+  animation: fadeInUp 0.6s ease 0.2s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 article {
   border-bottom: #fff5 1px solid;
@@ -381,7 +415,6 @@ iframe:hover {
     grid-row: 4 / 5;
   }
 
- 
   .curiosidades-section article div ul {
     flex-direction: column;
     padding: 1rem;
