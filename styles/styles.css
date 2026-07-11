@@ -451,7 +451,7 @@ textarea:focus-visible {
   }
 
   /* Mostrar botón "Ver más" en móvil */
-  .season-section ul li a .text-container .toggle-btn {
+  .season-section ul li .text-container .toggle-btn {
     display: inline-block;
   }
 }
@@ -494,11 +494,11 @@ textarea:focus-visible {
   }
 
   /* Truncar textos en tablet y mostrar botón */
-  .season-section ul li a .text-container p.text {
+  .season-section ul li .text-container p.text {
     -webkit-line-clamp: 3;
   }
 
-  .season-section ul li a .text-container .toggle-btn {
+  .season-section ul li .text-container .toggle-btn {
     display: inline-block;
     margin-top: 0.3rem;
   }
@@ -506,7 +506,7 @@ textarea:focus-visible {
 
 /* Desktop (1024px en adelante) - OCULTAR BOTÓN "VER MÁS" */
 @media screen and (min-width: 1024px) {
-  .season-section ul li a .text-container .toggle-btn {
+  .season-section ul li .text-container .toggle-btn {
     display: none !important;
   }
 }
