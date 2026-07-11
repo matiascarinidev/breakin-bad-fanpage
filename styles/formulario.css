@@ -57,10 +57,13 @@
 }
 
 .form-submit-btn:hover {
-  background: #da0;
+  background: #0a7a4a;
   transform: scale(1.05);
-  box-shadow: #da0 0 0 15px;
+  box-shadow: #0a7a4a 0 0 15px;
+  color: white;
+  /*123523564*/
 }
+
 .form-group:nth-child(1) {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
