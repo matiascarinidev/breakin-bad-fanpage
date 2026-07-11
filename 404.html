@@ -25,49 +25,21 @@
   <body>
     <header>
       <h2>Breaking Bad</h2>
-      <nav class="header-nav">
-           <button id="menu-toggle" aria-label="Menú">
-               <span></span>
-            <span></span>
-            <span></span>
-         </button>
-         <ul id="nav-menu"> 
-          <li>
-            <a href="https://breakin-bad-fanpage.vercel.app/index.html#inicio">
-              Inicio
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://breakin-bad-fanpage.vercel.app/index.html#sobre-la-serie"
-            >
-              Sobre la serie
-            </a>
-          </li>
-          <li>
-            <a href="https://breakin-bad-fanpage.vercel.app/index.html#elenco">
-              Elenco
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://breakin-bad-fanpage.vercel.app/index.html#temporadas-episodios"
-              >Temporadas</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://breakin-bad-fanpage.vercel.app/index.html#curiosidades"
-              >Curiosidades</a
-            >
-          </li>
-          <li>
-            <a href="https://breakin-bad-fanpage.vercel.app/index.html#contacto"
-              >Contacto</a
-            >
-          </li>
-        </ul>
-      </nav>
+      <nav class="header-nav" aria-label="Navegación principal">
+      <button id="menu-toggle" aria-label="Menú de navegación" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul id="nav-menu">
+        <li role="presentation"><a href="#inicio" role="menuitem" aria-current="page">Inicio</a></li>
+        <li role="presentation"><a href="#sobre-la-serie" role="menuitem">Sobre la serie</a></li>
+        <li role="presentation"><a href="#elenco" role="menuitem">Elenco</a></li>
+        <li role="presentation"><a href="#temporadas-episodios" role="menuitem">Temporadas</a></li>
+        <li role="presentation"><a href="#curiosidades" role="menuitem">Curiosidades</a></li>
+        <li role="presentation"><a href="#contacto" role="menuitem">Contacto</a></li>
+      </ul>
+    </nav>
     </header>
     <main>
       <section class="error-section">

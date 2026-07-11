@@ -1,70 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Breaking Bad - Temporada 2</title>
-   <link rel="stylesheet" href="https://breakin-bad-fanpage.vercel.app/styles/styles.css" />
-    <link rel="icon" type="image/x-icon" href="https://breakin-bad-fanpage.vercel.app/images/favicon.ico" />
+    <meta
+      name="description"
+      content="Temporada 2 de Breaking Bad: 13 episodios. Walter expande su negocio mientras oculta su doble vida. Aparecen Saul Goodman y Mike Ehrmantraut."
+    />
+    <link
+      rel="stylesheet"
+      href="https://breakin-bad-fanpage.vercel.app/styles/styles.css"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://breakin-bad-fanpage.vercel.app/images/favicon.ico"
+    />
   </head>
   <body>
     <header>
       <h1>Breaking Bad</h1>
-      <nav class="header-nav">
-           <button id="menu-toggle" aria-label="Menú">
-               <span></span>
-            <span></span>
-            <span></span>
-         </button>
-         <ul id="nav-menu"> 
-          <li>
-            <a href="https://breakin-bad-fanpage.vercel.app/index.html#inicio">
-              Inicio
-            </a>
+      <nav class="header-nav" aria-label="Navegación principal">
+        <button
+          id="menu-toggle"
+          aria-label="Menú de navegación"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul id="nav-menu" role="menubar">
+          <li role="none">
+            <a
+              href="https://breakin-bad-fanpage.vercel.app/index.html#inicio"
+              role="menuitem"
+              >Inicio</a
+            >
           </li>
-          <li>
+          <li role="none">
             <a
               href="https://breakin-bad-fanpage.vercel.app/index.html#sobre-la-serie"
+              role="menuitem"
+              >Sobre la serie</a
             >
-              Sobre la serie
-            </a>
           </li>
-          <li>
-            <a href="https://breakin-bad-fanpage.vercel.app/index.html#elenco">
-              Elenco
-            </a>
+          <li role="none">
+            <a
+              href="https://breakin-bad-fanpage.vercel.app/index.html#elenco"
+              role="menuitem"
+              >Elenco</a
+            >
           </li>
-          <li>
+          <li role="none">
             <a
               href="https://breakin-bad-fanpage.vercel.app/index.html#temporadas-episodios"
+              role="menuitem"
+              aria-current="page"
               >Temporadas</a
             >
           </li>
-          <li>
+          <li role="none">
             <a
               href="https://breakin-bad-fanpage.vercel.app/index.html#curiosidades"
+              role="menuitem"
               >Curiosidades</a
             >
           </li>
-          <li>
-            <a href="https://breakin-bad-fanpage.vercel.app/index.html#contacto"
+          <li role="none">
+            <a
+              href="https://breakin-bad-fanpage.vercel.app/index.html#contacto"
+              role="menuitem"
               >Contacto</a
             >
           </li>
         </ul>
       </nav>
     </header>
+
     <main>
       <section class="season-main-section">
         <article>
           <iframe
             width="560"
             height="315"
-            src="https://www.youtube.com/embed/I-8914DuyhY?si=sc2ARm6-DFvkgDR8"
-            title="Breaking Bad - Season 1 Trailer"
+            src="https://www.youtube.com/embed/I-8914DuyhY"
+            title="Trailer temporada 2 de Breaking Bad"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen
+            loading="lazy"
           ></iframe>
           <div>
             <h2>Breaking Bad - Temporada 2</h2>
@@ -82,6 +108,7 @@
           </div>
         </article>
       </section>
+
       <section class="season-episodes">
         <h3>Episodios</h3>
         <ul>
@@ -106,7 +133,7 @@
           </li>
           <li>
             <h3>5. Breakage</h3>
-            <p>La familia de Walter celebra el nacimiento de Holly</p>
+            <p>La familia de Walter celebra el nacimiento de Holly.</p>
           </li>
           <li>
             <h3>6. Black and Blue</h3>
@@ -141,7 +168,7 @@
             <p>Un niño es asesinado por dealers de Jesse.</p>
           </li>
           <li>
-            <h3>12.Phoenix</h3>
+            <h3>12. Phoenix</h3>
             <p>
               Jane muere por sobredosis mientras Walter la observa sin ayudarla.
             </p>
@@ -161,6 +188,7 @@
         </p>
       </section>
     </main>
+
     <footer>
       <section id="contacto" class="footer-content">
         <article>
@@ -173,6 +201,7 @@
                 href="https://twitter.com/BreakingBad_AMC"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Twitter oficial de Breaking Bad"
                 >@BreakingBad_AMC</a
               >
             </li>
@@ -183,6 +212,7 @@
                 href="https://www.instagram.com/breakingbad/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Instagram oficial de Breaking Bad"
                 >@breakingbad</a
               >
             </li>
@@ -193,6 +223,7 @@
                 href="https://www.facebook.com/BreakingBad/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Facebook oficial de Breaking Bad"
                 >BreakingBad</a
               >
             </li>
@@ -243,6 +274,10 @@
         </article>
       </section>
     </footer>
+
+    <script
+      src="https://breakin-bad-fanpage.vercel.app/scripts/main.js"
+      defer
+    ></script>
   </body>
-  <script src="https://breakin-bad-fanpage.vercel.app/scripts/main.js"></script>
 </html>

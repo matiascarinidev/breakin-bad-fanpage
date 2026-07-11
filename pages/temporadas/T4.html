@@ -1,70 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
-   <head>
+<html lang="es">
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Breaking Bad - Temporada 4</title>
-    <link rel="stylesheet" href="https://breakin-bad-fanpage.vercel.app/styles/styles.css" />
-    <link rel="icon" type="image/x-icon" href="https://breakin-bad-fanpage.vercel.app/images/favicon.ico" />
+    <meta
+      name="description"
+      content="Temporada 4 de Breaking Bad: 13 episodios. Walter y Gus se enfrentan en una guerra de inteligencia. Walter envenena a Brock para manipular a Jesse."
+    />
+    <link
+      rel="stylesheet"
+      href="https://breakin-bad-fanpage.vercel.app/styles/styles.css"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://breakin-bad-fanpage.vercel.app/images/favicon.ico"
+    />
   </head>
   <body>
     <header>
       <h1>Breaking Bad</h1>
-     <nav class="header-nav">
-           <button id="menu-toggle" aria-label="Menú">
-               <span></span>
-            <span></span>
-            <span></span>
-         </button>
-         <ul id="nav-menu"> 
-          <li>
-            <a href="https://breakin-bad-fanpage.vercel.app/index.html#inicio">
-              Inicio
-            </a>
+      <nav class="header-nav" aria-label="Navegación principal">
+        <button
+          id="menu-toggle"
+          aria-label="Menú de navegación"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul id="nav-menu" role="menubar">
+          <li role="none">
+            <a
+              href="https://breakin-bad-fanpage.vercel.app/index.html#inicio"
+              role="menuitem"
+              >Inicio</a
+            >
           </li>
-          <li>
+          <li role="none">
             <a
               href="https://breakin-bad-fanpage.vercel.app/index.html#sobre-la-serie"
+              role="menuitem"
+              >Sobre la serie</a
             >
-              Sobre la serie
-            </a>
           </li>
-          <li>
-            <a href="https://breakin-bad-fanpage.vercel.app/index.html#elenco">
-              Elenco
-            </a>
+          <li role="none">
+            <a
+              href="https://breakin-bad-fanpage.vercel.app/index.html#elenco"
+              role="menuitem"
+              >Elenco</a
+            >
           </li>
-          <li>
+          <li role="none">
             <a
               href="https://breakin-bad-fanpage.vercel.app/index.html#temporadas-episodios"
+              role="menuitem"
+              aria-current="page"
               >Temporadas</a
             >
           </li>
-          <li>
+          <li role="none">
             <a
               href="https://breakin-bad-fanpage.vercel.app/index.html#curiosidades"
+              role="menuitem"
               >Curiosidades</a
             >
           </li>
-          <li>
-            <a href="https://breakin-bad-fanpage.vercel.app/index.html#contacto"
+          <li role="none">
+            <a
+              href="https://breakin-bad-fanpage.vercel.app/index.html#contacto"
+              role="menuitem"
               >Contacto</a
             >
           </li>
         </ul>
       </nav>
     </header>
+
     <main>
       <section class="season-main-section">
         <article>
           <iframe
             width="560"
             height="315"
-            src="https://www.youtube.com/embed/WcUmzPcQEJo?si=RrR1XPQT2feIdG7z"
-            title="Breaking Bad - Season 1 Trailer"
+            src="https://www.youtube.com/embed/WcUmzPcQEJo"
+            title="Trailer temporada 4 de Breaking Bad"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen
+            loading="lazy"
           ></iframe>
           <div>
             <h2>Breaking Bad - Temporada 4</h2>
@@ -80,6 +106,7 @@
           </div>
         </article>
       </section>
+
       <section class="season-episodes">
         <h3>Episodios</h3>
         <ul>
@@ -129,7 +156,7 @@
           </li>
           <li>
             <h3>12. Fin del tiempo</h3>
-            <p>Walter planta el explosivo en silla de Hector.</p>
+            <p>Walter planta el explosivo en la silla de Hector.</p>
           </li>
           <li>
             <h3>13. Cara a cara</h3>
@@ -143,6 +170,7 @@
         </p>
       </section>
     </main>
+
     <footer>
       <section id="contacto" class="footer-content">
         <article>
@@ -155,6 +183,7 @@
                 href="https://twitter.com/BreakingBad_AMC"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Twitter oficial de Breaking Bad"
                 >@BreakingBad_AMC</a
               >
             </li>
@@ -165,6 +194,7 @@
                 href="https://www.instagram.com/breakingbad/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Instagram oficial de Breaking Bad"
                 >@breakingbad</a
               >
             </li>
@@ -175,6 +205,7 @@
                 href="https://www.facebook.com/BreakingBad/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Facebook oficial de Breaking Bad"
                 >BreakingBad</a
               >
             </li>
@@ -225,6 +256,10 @@
         </article>
       </section>
     </footer>
+
+    <script
+      src="https://breakin-bad-fanpage.vercel.app/scripts/main.js"
+      defer
+    ></script>
   </body>
-  <script src="https://breakin-bad-fanpage.vercel.app/scripts/main.js"></script>
 </html>
